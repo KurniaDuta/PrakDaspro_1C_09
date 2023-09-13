@@ -12,6 +12,8 @@ public class ContohVariabel09 {
         System.out.println("Apakah pandai?" + isPandai);
         System.out.println("Jenis kelamin:" + jenisKelamin);
         System.out.println("Umurku saat ini:" + umurSayaSekarang);
-        System.out.println(String.format("Saya beripk %s, dengan tinggi badan %s", ipk, tinggi));
+        // System.out.println(String.format("Saya beripk %s, dengan tinggi badan %s", ipk, tinggi));
+        System.out.println(String.format("Saya beripk " + ipk + " dengan tinggi badan " + tinggi));
     }
 }
+
