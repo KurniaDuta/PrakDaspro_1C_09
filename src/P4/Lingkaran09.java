@@ -13,7 +13,7 @@ public class Lingkaran09 {
         int r;
         double keliling, luas;
 
-        System.out.println("Maasukkan jari-jari linbgkaran: ");
+        System.out.println("Maasukkan jari-jari lingkaran: ");
         r =  input09.nextInt();
 
         keliling = 2*3.14*r;
