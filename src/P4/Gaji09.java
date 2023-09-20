@@ -6,8 +6,13 @@ public class Gaji09 {
     public static void main(String[] args) {
         Scanner input09 = new Scanner(System.in);
 
-        int jmlMasuk, JmlTdkMasuk, TotGaji;
-        int gaji = 40000, potGaji = 25000;
+        int jmlMasuk, JmlTdkMasuk, TotGaji, gaji, potGaji;
+        // int gaji = 40000, potGaji = 25000;
+
+        System.out.println("Masukkan Jumlah Gaji: ");
+        gaji = input09.nextInt();
+        System.out.println("Masukkan Potongan Gaji: ");
+        potGaji = input09.nextInt();
 
         System.out.println("Masukkan Jumlah Hari Masuk Kerja Anda: ");
         jmlMasuk = input09.nextInt();
