@@ -24,7 +24,30 @@ public class PemilihanPercobaan209 {
 
         String hasil;
         hasil = (nilaiAkhir < 65) ? "remidi" : "tidak remidi";
-        System.out.println("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil);
 
+        if (nilaiAkhir > 80 && nilaiAkhir <= 100) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda A");
+        } 
+        else if (nilaiAkhir > 73 && nilaiAkhir <=80) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda B+");
+        }
+        else if (nilaiAkhir > 65 && nilaiAkhir <=73) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda B");
+        }
+        else if (nilaiAkhir > 60 && nilaiAkhir <=65) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda C+");
+        }
+        else if (nilaiAkhir > 50 && nilaiAkhir <=60) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda C");
+        }
+        else if (nilaiAkhir > 39 && nilaiAkhir <=50) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda D");
+        }
+        else if (nilaiAkhir > 0 && nilaiAkhir <=39) {
+            System.out.print("Nilai akhir anda adalah " + nilaiAkhir + " sehingga " + hasil + " dan nilai huruf anda E");
+        }
+        else {
+            System.out.println("Nilai salah");
+        }
     }
 }
