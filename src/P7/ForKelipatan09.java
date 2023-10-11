@@ -21,6 +21,9 @@ public class ForKelipatan09 {
         System.out.printf("Banyaknya bilangan %d dari 1 sampai 50 adalah %d\n", kelipatan, counter);
         System.out.printf("Total bilangan kelipatan %d dari 1-50 adalah %d\n", kelipatan, jumlah);
 
+        double average = (double) jumlah / counter;
+        System.out.printf("Rata-rata bilangan kelipatan %d dari 1-50 adalah %.1f\n", kelipatan, average);
+        
         input09.close();
     }
 }
