@@ -19,14 +19,14 @@ public class DoWhileCuti09 {
             if (konfirmasi.equalsIgnoreCase("y")) {
                 System.out.print("Jumlah hari cuti: ");
                 jumlahhari = input09.nextInt();
-                
+
                 if (jumlahhari <= jatahCuti) {
                     jatahCuti -= jumlahhari;
                     System.out.println("Sisa jatah cuti Anda: " + jatahCuti);
                 } 
                 else {
                     System.out.println("Sisa jatah cuti Anda tidak mencukupi");
-                    break;
+                    // break;
                 }
             }
         } while (jatahCuti > 0);
