@@ -29,9 +29,6 @@ public class DoWhileCuti09 {
                     // break;
                 }
             }
-            else {
-                break;
-            }
         } while (jatahCuti > 0);
 
         input09.close();
