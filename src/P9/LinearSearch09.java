@@ -1,15 +1,27 @@
 package P9;
 
+import java.util.Scanner;
+
 public class LinearSearch09 {
     public static void main(String[] args) {
-        int[] arrayInt = {34, 18, 26, 48, 72, 20, 56, 63};
-        int key = 20;
-        int hasil = 0;
+        Scanner input09 = new Scanner(System.in);
 
-        for (int i = 0; i < arrayInt.length; i++) {
+        System.out.print("Masukkan jumlah elemen array: ");
+        int jmlElemen = input09.nextInt();
+
+        int[] arrayInt = new int[jmlElemen];
+        int key, hasil =0, i;
+
+        for (i = 0; i < arrayInt.length; i++) {
+            System.out.print("Masukkan elemen ke-" + i + ": ");
+            arrayInt[i] = input09.nextInt();
+        }
+        System.out.print("Masukkan key yang ingin dicari: ");
+        key = input09.nextInt();
+        for (i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
-                hasil = i;
-                break;
+            hasil = i;
+            break;
             }
         }
         System.out.println("Key ada dalam array pada posisi index ke-" + hasil);
