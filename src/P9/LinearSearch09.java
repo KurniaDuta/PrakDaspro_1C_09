@@ -24,6 +24,10 @@ public class LinearSearch09 {
             break;
             }
         }
-        System.out.println("Key ada dalam array pada posisi index ke-" + hasil);
+        if (hasil == i) {
+            System.out.println("Key ada dalam array pada posisi index ke-" + hasil);
+        } else {
+            System.out.println("Key tidak ditemukan");
+        }
     }
 }
