@@ -76,12 +76,18 @@ public class JasaLaundry09 {
                         System.out.println("nama: " + nama09);
 
                         // Menghitung jenis Layanan
-                        if (jenisLayanan09 == '1') {
-                            biayaLaundry09 = 4000;
-                        } else if (jenisLayanan09 == '2') {
-                            biayaLaundry09 = 5000;
-                        } else {
-                            biayaLaundry09 = 3500;
+                        switch (jenisLayanan09) {
+                            case '1':
+                                biayaLaundry09 = 4000;
+                                break;
+                            case '2':
+                                biayaLaundry09 = 5000;
+                                break;
+                            case '3':
+                                biayaLaundry09 = 3500;
+                                break;
+                            default:
+                                break;
                         }
                         totalBiayaLaundry09 = biayaLaundry09 * berat09;
 
