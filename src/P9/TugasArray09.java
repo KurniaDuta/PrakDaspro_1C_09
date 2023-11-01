@@ -15,12 +15,15 @@ public class TugasArray09 {
         for (int i = 0; i < jmlElemen; i++) {
             System.out.print("Masukkan elemen ke-" + i + ": ");
             nilaiElemen[i] = input09.nextInt();
-            nilaiTertinggi = nilaiElemen[0];
-            nilaiTerendah = nilaiElemen[0];
             average += nilaiElemen[i];
+        }
+        nilaiTertinggi = nilaiElemen[0];
+        nilaiTerendah = nilaiElemen[0];
+        for (int i = 0; i < nilaiElemen.length; i++) {
             if (nilaiElemen[i] > nilaiTertinggi) {
                 nilaiTertinggi = nilaiElemen[i];
-            } else if (nilaiElemen[i] < nilaiTerendah) {
+            }
+            if (nilaiElemen[i] < nilaiTerendah) {
                 nilaiTerendah = nilaiElemen[i];
             }
         }
