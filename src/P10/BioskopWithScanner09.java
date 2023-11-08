@@ -15,7 +15,6 @@ public class BioskopWithScanner09 {
         System.out.flush();
 
         do {
-
             System.out.println("\nSelamat datang di bioskop 4D!");
             System.out.println("\n+---------Daftar Menu---------+");
             System.out.println("1. Input data penonton");
@@ -35,8 +34,13 @@ public class BioskopWithScanner09 {
                         System.out.print("Masukkan kolom: ");
                         kolom = input09.nextInt();
                         input09.nextLine();
+                        
+                        if (baris < 1 || penonton.length < baris || kolom < 1 || penonton[baris - 1].length < kolom) {
+                            System.out.println("Kursi tidak tersedia!");
+                        } else {
+                            penonton[baris - 1][kolom - 1] = nama;
+                        }
 
-                        penonton[baris - 1][kolom - 1] = nama;
                         System.out.print("Apakah ada penonton lain? (y/n): ");
                         next = input09.nextLine();
                         if (next.equalsIgnoreCase("n")) {
@@ -54,9 +58,6 @@ public class BioskopWithScanner09 {
                             System.out.printf("Baris %d, Kolom %d: %s\n", baris, kolom, nama);
                         }
                     }
-                    // for (int i = 0; i < penonton.length; i++) {
-                    //     System.out.println("Baris " + (i + 1) + ": " + String.join(", ", penonton[i]));
-                    // }
                     break;
 
                 case 3:
