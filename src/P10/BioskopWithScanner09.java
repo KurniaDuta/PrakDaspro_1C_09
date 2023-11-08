@@ -29,16 +29,25 @@ public class BioskopWithScanner09 {
                         System.out.print("Masukkan nama penonton: ");
                         nama = input09.next();
                         input09.nextLine();
-                        System.out.print("Masukkan baris: ");
-                        baris = input09.nextInt();
-                        System.out.print("Masukkan kolom: ");
-                        kolom = input09.nextInt();
-                        input09.nextLine();
-                        
-                        if (baris < 1 || penonton.length < baris || kolom < 1 || penonton[baris - 1].length < kolom) {
-                            System.out.println("Kursi tidak tersedia!");
-                        } else {
-                            penonton[baris - 1][kolom - 1] = nama;
+
+                        boolean KursiTerisi = false;
+                        while (!KursiTerisi) {
+                            System.out.print("Masukkan baris: ");
+                            baris = input09.nextInt();
+                            System.out.print("Masukkan kolom: ");
+                            kolom = input09.nextInt();
+                            input09.nextLine();
+
+                            if (baris < 1 || penonton.length < baris || kolom < 1
+                                    || penonton[baris - 1].length < kolom) {
+                                System.out.println("Kursi tidak tersedia!");
+                            } else if (penonton[baris - 1][kolom - 1] != null) {
+                                System.out.println("Kursi sudah terisi!");
+                                KursiTerisi = false;
+                            } else {
+                                penonton[baris - 1][kolom - 1] = nama;
+                                KursiTerisi = true;
+                            }
                         }
 
                         System.out.print("Apakah ada penonton lain? (y/n): ");
@@ -48,6 +57,7 @@ public class BioskopWithScanner09 {
                         }
                     }
                     break;
+
                 case 2:
                     System.out.println("\n+---------Data Penonton---------+");
                     for (int i = 0; i < penonton.length; i++) {
