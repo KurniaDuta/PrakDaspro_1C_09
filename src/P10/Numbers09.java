@@ -12,5 +12,9 @@ public class Numbers09 {
         for (int i = 0; i < myNummbers.length; i++) {
             System.out.println(Arrays.toString(myNummbers[i]));
         }
+
+        for (int i = 0; i < myNummbers.length; i++) {
+            System.out.println("Panjang baris [" + (i+1) + "] = " + myNummbers[i].length);
+        }
     }   
 }
