@@ -65,7 +65,8 @@ public class BioskopWithScanner09 {
                             baris = i + 1;
                             kolom = j + 1;
                             nama = penonton[i][j];
-                            System.out.printf("Baris %d, Kolom %d: %s\n", baris, kolom, nama);
+                            String tempatDuduk = (nama != null) ? nama : "***";
+                            System.out.printf("Baris %d, Kolom %d: %s\n", baris, kolom, tempatDuduk);
                         }
                     }
                     break;
@@ -77,5 +78,6 @@ public class BioskopWithScanner09 {
                     break;
             }
         } while (choice != 3);
+        input09.close();
     }
 }
