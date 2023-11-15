@@ -12,6 +12,7 @@ public class ArrayDua09 {
         double total[] = { 0, 0, 0, 0 };
         double rata[] = { 0, 0, 0, 0 };
         int kecepatanAngin[] = new int[4];
+        int max[] = { 0, 0, 0, 0 };
 
         for (int i = 0; i < data.length; i++) {
             System.out.printf("Jam %s\n", jam[i]);
@@ -22,6 +23,8 @@ public class ArrayDua09 {
                         data[i][j] = input09.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } else if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -30,6 +33,8 @@ public class ArrayDua09 {
                         data[i][j] = input09.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } else if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -39,6 +44,8 @@ public class ArrayDua09 {
                         kecepatanAngin[i] = data[i][j];
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } else if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -47,6 +54,8 @@ public class ArrayDua09 {
                         data[i][j] = input09.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        } else if (max[j] < data[i][j]) {
+                            max[j] = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -71,5 +80,9 @@ public class ArrayDua09 {
         System.out.println("-----------------");
         System.out.printf("Rata-rata suhu: %.2f\n", rata[0]);
         System.out.printf("Presentase kelembaban terendah: %s\n", min[1]);
+        System.out.printf("Suhu tertinggi: %s\n", max[0]);
+        System.out.printf("Kelembaban tertinggi: %s\n", max[1]);
+        System.out.printf("Kecepatan angin tertinggi: %s\n", max[2]);
+        System.out.printf("Index UV tertinggi: %s\n", max[3]);
     }
 }
