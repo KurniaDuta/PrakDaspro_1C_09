@@ -11,6 +11,7 @@ public class ArrayDua09 {
         int min[] = { 100, 100, 100, 100 };
         double total[] = { 0, 0, 0, 0 };
         double rata[] = { 0, 0, 0, 0 };
+        int kecepatanAngin[] = new int[4];
 
         for (int i = 0; i < data.length; i++) {
             System.out.printf("Jam %s\n", jam[i]);
@@ -35,6 +36,7 @@ public class ArrayDua09 {
                     case 2:
                         System.out.print("Masukkan kecepatan angin: ");
                         data[i][j] = input09.nextInt();
+                        kecepatanAngin[i] = data[i][j];
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
                         }
@@ -60,6 +62,11 @@ public class ArrayDua09 {
                 System.out.print(data[i][j] + " ");
             }
             System.out.println("");
+        }
+        System.out.println("-----------------");
+        System.out.println("Data Kecepatan Angin");
+        for (int i = 0; i < kecepatanAngin.length; i++) {
+            System.out.println("Jam " + jam[i] + ": " + kecepatanAngin[i] + " ");
         }
         System.out.println("-----------------");
         System.out.printf("Rata-rata suhu: %.2f\n", rata[0]);
