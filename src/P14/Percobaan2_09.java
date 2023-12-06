@@ -11,6 +11,17 @@ public class Percobaan2_09 {
         }
     }
 
+    static void deretPangkat(int x, int y) {
+        System.out.print(x + "^" + y + " = ");
+        for (int i = 1; i <= y; i++) {
+            System.out.print(x);
+            if (i <= y) {
+                System.out.print("x");
+            }
+        }
+        System.out.println(1+ " = " + hitungPangkat(x, y));
+    }
+
     public static void main(String[] args) {
         Scanner input09 = new Scanner(System.in);
         int bilangan, pangkat;
@@ -20,6 +31,6 @@ public class Percobaan2_09 {
         System.out.print("Pangkat: ");
         pangkat = input09.nextInt();
 
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        deretPangkat(bilangan, pangkat);
     }
 }
