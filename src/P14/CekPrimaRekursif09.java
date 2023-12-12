@@ -6,12 +6,12 @@ public class CekPrimaRekursif09 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Masukkan angka: ");
-        int num = input.nextInt();
+        int angka = input.nextInt();
 
-        if (isPrime(num)) {
-            System.out.println(num + " adalah bilangan prima");
+        if (isPrime(angka)) {
+            System.out.println(angka + " adalah bilangan prima");
         } else {
-            System.out.println(num + " bukan bilangan prima");
+            System.out.println(angka + " bukan bilangan prima");
         }
     }
 
